@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+                android:id="@+id/switchOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/off_all"
+        />
+        <RadioButton
+                android:id="@+id/switchOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_all"
+        />
+
+    </RadioGroup>
+
+    <Button
+            android:id="@+id/addRnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+    <Button
+            android:id="@+id/addRndSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="addSecond"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addRnd"
+    />
+
+    <LinearLayout
+            android:id="@+id/switchersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <Switch
+                android:id="@+id/firstSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1й увлажнитель"
+        />
+        <Switch
+                android:id="@+id/secondSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2й увлажнитель"
+        />
+        <Switch
+                android:id="@+id/thirdSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3й увлажнитель"
+        />
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/switchersLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
